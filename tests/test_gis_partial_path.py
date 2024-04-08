@@ -14,7 +14,7 @@ def conn():
     return conn
 
 @pytest.mark.parametrize("type", (float, str))
-def test_gis_partial_path(conn, el_lat, el_lng, type):
+def test_gis_partial_path(conn, type):
     actual = conn.execute(
         "select gis_partial_path_lat((?, ?, ?, ?, ?)",
         [type(KD0FNR[0]), type(KD0FNR[1]), type(N6MKW[0]), type(N6MKW[1]), 2000],
