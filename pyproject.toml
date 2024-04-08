@@ -22,8 +22,8 @@ Issues = "https://github.com/hcarter333/datasette-gis-partial-path/issues"
 CI = "https://github.com/hcarter333/datasette-gis-partial-path/actions"
 
 [project.entry-points.datasette]
-gis_partial_path_lng = "datasette_gis_partial_path_lng"
-gis_partial_path_lat = "datasette_gis_partial_path_lat"
+gis_partial_path_lng = "datasette_gis_partial_path"
+gis_partial_path_lat = "datasette_gis_partial_path"
 
 [project.optional-dependencies]
 test = ["pytest"]
