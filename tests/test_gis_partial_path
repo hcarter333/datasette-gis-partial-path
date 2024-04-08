@@ -1,4 +1,4 @@
-from datasette_haversine_point_path import prepare_connection
+from datasette_gis_partial_path import prepare_connection
 import sqlite3
 import pytest
 
@@ -14,7 +14,7 @@ def conn():
     return conn
 
 @pytest.mark.parametrize("type", (float, str))
-def test_gis_partial_path(conn, unit, expected, type):
+def test_gis_partial_path(conn, unit, el_lat, el_lng, type):
     actual = conn.execute(
         "select gis_partial_path_lat((?, ?, ?, ?, ?)",
         [type(KD0FNR[0]), type(KD0FNR[1]), type(N6MKW[0]), type(N6MKW[1]), 2000],
